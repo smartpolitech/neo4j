@@ -1,0 +1,11 @@
+<div>
+    <button class="close-button" type="button" (click)="closePanel()">×</button>
+    <canvas baseChart 
+        [labels]="xAxisLabels"
+        [datasets]="graphDatasets" 
+        [options]="graphOptions"
+        [colors]="colors" 
+        [legend]="legend" 
+        [chartType]="type">
+    </canvas>
+</div>

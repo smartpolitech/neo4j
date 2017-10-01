@@ -1,0 +1,46 @@
+body { margin:0; padding:0; }
+
+#map { 
+    position:absolute; 
+	top:0;
+	bottom:0; 
+	width:100%;
+	z-index: -1;
+}
+
+#layers-control {
+  position: fixed;
+  left: 10px;
+  box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.20);
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.device-chart {
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 800;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #777;
+    background-color: white;
+    border-color: silver;
+    border-radius: 5px;
+    height: 220px;
+    overflow-x: hidden;
+}
+
+.left-panel-hide {
+    width: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.left-panel-show {
+    width: 400px;
+    padding: 10px;
+    box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.20);
+    border: solid;
+    border-width: 1px;
+}

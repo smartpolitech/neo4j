@@ -1,0 +1,17 @@
+.close-button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    cursor: pointer;
+    z-index: 800;
+    border: none;
+    border-radius: 0 3px 0 0;
+    background-color: rgba(0,0,0,0);
+    padding: 1px 6px;
+    text-align: center;
+}
+
+.close-button:hover {
+    background-color: rgba(220, 220, 220, 0.8);
+}

@@ -1,0 +1,26 @@
+<div id="map"></div>
+    <line-chart id="temperature-chart" class="device-chart left-panel-hide"
+        [deviceDescription]="deviceDescription"
+        [datasets]="temperatureDatasets"
+        [xAxisLabels]="xAxisLabels"
+        (close)=closeDeviceChartPanels()></line-chart>
+
+    <line-chart id="water-chart" class="device-chart left-panel-hide"
+        [deviceDescription]="deviceDescription"
+        [datasets]="waterDatasets"
+        [xAxisLabels]="xAxisLabels"
+        (close)=closeDeviceChartPanels()></line-chart>
+
+    <line-chart id="power-chart" class="device-chart left-panel-hide"
+        [deviceDescription]="deviceDescription"
+        [datasets]="powerDatasets"
+        [xAxisLabels]="xAxisLabels"
+        (close)=closeDeviceChartPanels()></line-chart>
+
+<layers-control id="layers-control"
+    [map]="map" 
+    [layersInfo]="floorPlans"
+    [overlaysInfo]="deviceTypes"
+    (selectedBaseLayer)="onSelectFloor($event)"
+    (selectedOverlay)="onSelectDeviceType($event)"></layers-control>
+   

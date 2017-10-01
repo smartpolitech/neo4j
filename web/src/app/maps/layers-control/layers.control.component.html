@@ -1,0 +1,32 @@
+<div [class]="containerClass" aria-haspopup="true" (mouseenter)="expand()" (mouseleave)="collapse()">
+    <a class="leaflet-control-layers-toggle" href="#" title="Layers"></a>
+    <form class="leaflet-control-layers-list">
+        <div class="leaflet-control-layers-base">
+            <div *ngFor="let layer of layersInfo, let i=index;">
+                <label><div>
+                    <input type="radio" 
+                    class="leaflet-control-layers-selector" 
+                    name="leaflet-base-layers"
+                    [value]="layer.id"
+                    (change)="onLayerChange($event)"
+                    [checked]="layer.checked">
+                    <span>{{layer.displayName}}</span>
+                </div></label>
+            </div>
+        </div>
+        <div class="leaflet-control-layers-separator"></div>
+        <div class="leaflet-control-layers-overlays">
+            <div *ngFor="let overlay of overlaysInfo, let i=index;">
+                <label><div>
+                    <input type="checkbox" 
+                    class="leaflet-control-layers-selector" 
+                    [value]="overlay.id"
+                    (change)="onOverlaySelect($event)"
+                    [checked]="overlay.checked">
+                    <span>{{overlay.displayName}}</span>
+                </div></label>
+            </div>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,77 @@
+/* Loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid lightsteelblue;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Popups */
+.mapboxgl-popup {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #777;
+  border-color: silver;
+  border-radius: 5px;
+}
+
+.mapboxgl-popup h4 {
+  margin-top:3px;
+  margin-bottom:8px;
+}
+
+/* Devices */
+.device {
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  z-index: 0.5;
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  visibility: hidden;
+}
+
+.device:hover {
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.temperature {
+  background-image: url(assets/devices/temperature.png);
+}
+
+.water {
+  background-image: url(assets/devices/water.png)
+}
+
+.power {
+  background-image: url(assets/devices/power.png)
+}
+
+.smartTv {
+  background-image: url(assets/devices/tv.png)
+}
